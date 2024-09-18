@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open in Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .browser-buttons img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Проверяем, открыт ли сайт в Instagram (через его встроенный браузер)
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            if (/instagram/i.test(ua)) {
+                // Если в Instagram, показываем переходные ссылки
+                document.getElementById('manualRedirect').style.display = 'block';
+            } else {
+                // Если не в Instagram, перенаправляем сразу на основной сайт
+                window.location.href = "https://konstantin902011.github.io/Carry-ranks-/";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Open in Your Browser</h1>
+    <p>If you're viewing this page inside Instagram, please open the link below in your regular browser.</p>
+
+    <!-- Переходные ссылки для популярных браузеров -->
+    <div id="manualRedirect" style="display:none;">
+        <p>Choose your browser to continue:</p>
+        <div class="browser-buttons">
+            <a class="button" href="googlechrome://navigate?url=https://konstantin902011.github.io/Carry-ranks-/">
+                <img src="chrome.png" alt="Chrome"> Open in Chrome
+            </a>
+            <a class="button" href="firefox://open-url?url=https://konstantin902011.github.io/Carry-ranks-/">
+                <img src="firefox.png" alt="Firefox"> Open in Firefox
+            </a>
+            <a class="button" href="microsoft-edge:https://konstantin902011.github.io/Carry-ranks-/">
+                <img src="edge.png" alt="Edge"> Open in Edge
+            </a>
+            <a class="button" href="safari:https://konstantin902011.github.io/Carry-ranks-/">
+                <img src="safari.png" alt="Safari"> Open in Safari
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
