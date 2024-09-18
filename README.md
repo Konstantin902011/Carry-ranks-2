@@ -48,8 +48,6 @@
 </head>
 <body>
 
-    <h1>Open in Your Browser</h1>
-    <p>If you are viewing this page inside Instagram, please open the link below in your regular browser.</p>
     
     <!-- Эта кнопка появляется только если сайт открыт в Instagram -->
     <div id="manualRedirect" style="display:none;">
